@@ -1,5 +1,5 @@
 <?php
-$apiKey = "AIzaSyCdDyxX4m3r-ruJuLBet75EZK4Y0Y-vaK4";
+$apiKey = "";
 $placeId = "places/ChIJjQsVTA6prI8RvPbJO147ATk";
 
 $url = "https://places.googleapis.com/v1/{$placeId}?fields=reviews,rating,userRatingCount&key=$apiKey";
