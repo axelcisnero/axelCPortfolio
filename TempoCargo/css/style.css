@@ -18,6 +18,13 @@ html, body {
     left: 32px;
 }
 
+.logo img#logotc{
+  display:block;
+  height:auto;
+  max-height:65px; /* respeta tu altura visual previa */
+  width:auto;
+}
+
 .nav-links {
     display: flex;
     justify-content: space-between;
@@ -56,12 +63,14 @@ html, body {
 }
 
 .navbar{
-    width: 1318;
-    height: 153;
+    width: 1328px;
+    height: auto;
     margin: 42px auto 0 auto;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
     padding: 0 18px;
+    gap: 24px;
 }
 
 .nav-actions {
@@ -326,51 +335,6 @@ html, body {
   margin: 16px auto 24px;
 }
 
-/* ====== LÁMINA SERVICIOS ====== */
-.bloque-servicios{
-  background-image: linear-gradient(rgba(83,11,14,.78), rgba(83,11,14,.78)),
-                    url('../assets/img/shipCargoUp.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: 60px;
-  padding: 60px 0;
-  color: #fff;
-}
-
-.servicios-wrap{
-  max-width: 1328px;
-  margin: 0 auto;
-  padding: 0 100px;
-}
-
-/* Título y línea (estilo similar a “Nosotros”) */
-.servicios-titulo{
-  font-family: 'Exo 2', sans-serif;
-  color: #C8A06C;
-  font-weight: 800;
-  font-size: 28px;
-  text-align: right;
-  margin-bottom: 10px;
-}
-.servicios-titulo + .linea-degrade-servicios{
-  width: 210px;
-  height: 5px;
-  margin: 0 0 24px auto; /* alineada a la derecha */
-  border-radius: 2px;
-  background: linear-gradient(to left, transparent, #C8A06C);
-}
-
-/* Filas de servicio */
-.servicio.fila{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-  margin: 28px 0 54px;
-}
-.servicio.fila.inversa{ flex-direction: row-reverse; }
-
 /* Columna texto */
 .servicio-texto{
   flex: 1;
@@ -419,9 +383,84 @@ html, body {
 
 /* Responsive */
 @media (max-width: 1100px){
-  .servicios-wrap{ padding: 0 20px; }
-  .servicio.fila, .servicio.fila.inversa{ flex-direction: column; gap: 22px; }
   .servicio-texto{ text-align: center; }
-  .servicios-titulo{ text-align: center; }
   .servicios-titulo + .linea-degrade-servicios{ margin: 0 auto 24px; }
+}
+
+/* ====== LÁMINA SERVICIOS ====== */
+.bloque-servicios{
+  background-image: linear-gradient(rgba(83,11,14,.78), rgba(83,11,14,.78)),
+                    url('../assets/img/shipCargoUp.png'); /* usa la que tengas */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 60px;
+  padding: 60px 0;
+  color: #fff;
+}
+
+.servicios-wrap{
+  max-width: 1328px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+/* Título y línea (mismo lenguaje visual que “Nosotros”) */
+.servicios-titulo{
+  font-family: 'Exo 2', sans-serif;
+  color: #C8A06C;
+  font-weight: 800;
+  font-size: 28px;
+  text-align: right;
+  margin-bottom: 10px;
+}
+.linea-degrade-servicios{
+  width: 210px;
+  height: 5px;
+  margin: 0 0 24px auto;      /* alineada a la derecha */
+  border-radius: 2px;
+  background: linear-gradient(to right, #C8A06C, transparent);
+}
+
+/* Filas */
+.servicio.fila{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin: 28px 0 54px;
+}
+
+/* Texto e h3 con su degradé */
+.servicio-texto{ flex:1; font-family:'Exo 2',sans-serif; max-width:560px; }
+.servicio-h3{
+  color:#C8A06C; font-weight:800; font-size:24px; margin:0;
+}
+.linea-degrade-titulo-servicio{
+  width:90%; max-width:210px; height:5px; margin:8px 0 16px 0;
+  background: linear-gradient(to right, #C8A06C, transparent);
+  border-radius:2px;
+}
+.servicio-desc{ color:#f3e6d1; font-size:18px; line-height:1.35; margin-bottom:14px; }
+
+/* Botón */
+.btn-servicio{
+  display:inline-block; background:#C8A06C; color:#530B0E; font-weight:800;
+  padding:10px 18px; border-radius:10px; text-decoration:none; transition:filter .2s;
+}
+.btn-servicio:hover{ filter:brightness(1.08); }
+
+/* Imagen */
+.servicio-img{ flex:1; display:flex; justify-content:center; }
+.servicio-img img{
+  width:100%; max-width:560px; height:auto; border-radius:12px;
+  box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+
+/* Responsive */
+@media (max-width:1100px){
+  .servicios-wrap{ padding:0 20px; }
+  .servicio.fila, .servicio.fila.inversa{ flex-direction:column; gap:22px; }
+  .servicios-titulo{ text-align:center; }
+  .linea-degrade-servicios{ margin:0 auto 24px; }
 }
