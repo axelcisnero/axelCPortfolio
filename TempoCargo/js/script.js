@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // crea un contenedor único para el footer
   const footerContainer = document.createElement("div");
   footerContainer.id = "footer-root";
   document.body.appendChild(footerContainer);
 
-  fetch("../html/partials/footer.html") // ajusta la ruta si tu index.html está en otra carpeta
+  // desde /html/index.html hacia /html/partials/footer.html
+  fetch("./partials/footer.html")
     .then(res => {
       if (!res.ok) throw new Error(`Error ${res.status} al cargar footer`);
       return res.text();

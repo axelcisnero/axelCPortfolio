@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/ico/faviconTc.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/script.js"></script>
+	<link rel="stylesheet" href="../css/footer-tempo.css" />
     <title>Tempo Cargo S.A.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="landing">
@@ -54,7 +57,7 @@
 		<div class="seccion-nosotros">
 		  <div class="contenido-nosotros">
 		    <div class ="titulo-nosotros">
-		      <h2>Nosotros</h2>
+		      <h3 class="servicio-h3">Nosotros</h3>
 		      <div class="linea-degrade-titulo-nosotros"></div>
 	        </div>
 		    <div class="texto-nosotros">
@@ -143,18 +146,52 @@
         <a href="#" class="btn-servicio">Más Información</a>
       </div>
     </section>
-
   </div>
 </section>
-</div>
-<div id="footer-container"></div>
+    <!-- ======= FOOTER START ======= -->
+<footer class="nuevo-footer">
+  <div class="linea-degrade-footer-top"></div>
+<div class="footer-top">
+  <!-- Izquierda: MAPA -->
+  <div class="footer-col footer-map">
+    <iframe
+      title="Mapa Tempo Cargo"
+      src="https://www.google.com/maps?q=Tempo%20Cargo%20Panam%C3%A1&output=embed"
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- Centro: CONTACTO -->
+  <div class="footer-col footer-contact">
+    <h4>Contáctanos</h4>
+    <p><i class="bi bi-geo-alt-fill"></i> Calle 43, Bella Vista, PH Colores de Bella Vista, Piso 6 Oficina 6C</p>
+    <p><i class="bi bi-envelope-fill"></i> info@tempocargo.com</p>
+    <p><i class="bi bi-telephone-fill"></i> +507 380-7628 / +507 6348-6577</p>
+  </div>
+
+  <!-- Derecha: SÍGUENOS (como ya lo tienes) -->
+  <div class="footer-col footer-social">
+    <h4>Síguenos</h4>
+    <div class="social-links">
+      <a href="https://www.facebook.com/tempocargo" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/tempocargo/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://tiktok.com/@tempocargo" target="_blank"><i class="bi bi-tiktok"></i></a>
+    </div>
+      <div class="footer-col footer-logo">
+      <img src="../assets/img/TC LOGO-03.png" alt="Tempo Cargo">
+    </div>
+    </div>
+  </div>
+<div class="linea-degrade-footer-bottom"></div>
+  <div class="footer-bottom">
+    <p>© <span id="tc-year"></span> Todos los derechos reservados. Diseñado por Hardsoft Solution Center<br>
+      <a href="#">Términos y Condiciones</a>
+    </p>
+  </div>
+</footer>
+
 <script>
-  fetch('../partials/footer.html') // ajusta la ruta según tu estructura
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('footer-container').innerHTML = html;
-    })
-    .catch(err => console.error('Error cargando footer:', err));
+  document.getElementById("tc-year").textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
