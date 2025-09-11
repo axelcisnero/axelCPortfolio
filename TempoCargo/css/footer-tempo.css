@@ -1,6 +1,6 @@
 .nuevo-footer {
   background: #5b1111; /* granate corporativo */
-  color: #fff;
+  color: #EEEEEE;
   font-family: "Exo 2", sans-serif;
   margin-top: 60px;
 }
@@ -39,7 +39,7 @@
   max-width: 1328px;
   height: 8px;
   margin: 16px auto 0 auto;
-  background: linear-gradient(to right, transparent, #C8A06C, transparent);
+  background: linear-gradient(to right, transparent, #C79E6A, transparent);
   border-radius: 6px;
 }
 
@@ -48,13 +48,13 @@
   max-width: 1328px;
   height: 8px;
   margin: 0px auto 0 auto;
-  background: linear-gradient(to right, transparent, #C8A06C, transparent);
+  background: linear-gradient(to right, transparent, #C79E6A, transparent);
   border-radius: 6px;
 }
 
 .footer-col h4 {
   text-align: left;
-  color: #e7c77a;
+  color: #C79E6A;
   margin-bottom: 16px ;
   font-weight: 700;
 }
@@ -100,17 +100,17 @@
   height: 38px;
   border-radius: 50%;
   background: rgba(255,255,255,0.1);
-  color: #fff;
+  color: #EEEEEE;
   transition: 0.3s;
   text-decoration: none;
 }
 .footer-social a:hover {
-  background: #e7c77a;
+  background: #C79E6A;
   color: #5b1111;
 }
 
 .footer-bottom {
-  background: #fff;
+  background: #EEEEEE;
   text-align: center;
   padding: 14px;
 }

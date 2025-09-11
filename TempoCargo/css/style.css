@@ -103,12 +103,50 @@ html, body {
 	height: auto;
 }
 
+/* === Inicia diseño de menú de navegación=== */
+
+/* contenedor dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* oculto por defecto */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;  /* justo debajo del enlace Servicios */
+  left: 0;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,.2);
+  z-index: 1000;
+}
+
+/* enlaces dentro del dropdown */
+.dropdown-content a {
+  color: #530B0E;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.dropdown-content a:hover {
+  background-color: #f3e6d1;
+}
+
+/* mostrar cuando pasas el mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* === Termina Diseño de navegación menú === */
+
 .video-efecto {
 	position: relative;
 	width: 100vw;
 	height: 491px;
 	overflow: hidden;
-	margin: 40px 0 0 0;
 }
 
 .video-efecto video {
@@ -135,7 +173,7 @@ html, body {
   font-family: 'Exo 2', sans-serif;
   font-size: 18px;
   font-weight: bold;
-  color: #000;
+  color: #C79E6A;
   margin: 40px auto;
   max-width: 1328px; /* ← así se adapta a la línea */
 }
@@ -145,16 +183,11 @@ html, body {
   max-width: 1328px;
   height: 4px;
   margin: 16px auto 0 auto;
-  background: linear-gradient(to right, transparent, #C8A06C, transparent);
+  background: linear-gradient(to right, transparent, #C79E6A, transparent);
   border-radius: 2px;
 }
 
 .seccion-nosotros {
-  /*background-image: linear-gradient(rgba(83, 11, 14, 0.85), rgba(83, 11, 14, 0.85)), url('../assets/img/nosotros background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;*/
   color: white;
   padding: 60px 100px;
   justify-content: space-between;
@@ -174,7 +207,7 @@ html, body {
 .titulo-nosotros {
   font-family: 'Exo 2', sans-serif;
   font-size: 20px;
-  color: #C8A06C;
+  color: #C79E6A;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -184,7 +217,7 @@ html, body {
   width: 90%;
   max-width: 210px;
   height: 5px;
-  background: linear-gradient(to left, transparent, #C8A06C);
+  background: linear-gradient(to left, transparent, #C79E6A);
   border-radius: 2px;
 }
 
@@ -192,7 +225,7 @@ html, body {
   font-family: 'Exo 2', sans-serif;
   font-weight: bold;
   font-size: 20px;
-  color: #C8A06C;
+  color: #C79E6A;
   text-align: left;
 }
 
@@ -213,7 +246,7 @@ html, body {
 .reseñas-titulo {
     font-family: 'Exo 2', sans-serif;
     text-align: center;
-    color: #C8A06C;
+    color: #C79E6A;
     font-size: 28px;
     margin-bottom: 20px;
 }
@@ -256,7 +289,7 @@ html, body {
 }
 
 .boton-reseñas {
-    background-color: #C8A06C;
+    background-color: #C79E6A;
     color: #530B0E;
     font-family: 'Exo 2', sans-serif;
     font-weight: bold;
@@ -271,9 +304,6 @@ html, body {
 }
 
 .opiniones-clientes {
-  /*background-image: linear-gradient(rgba(83, 11, 14, 0.85), rgba(83, 11, 14, 0.85)),
-                    url('../assets/img/nosotros background.png');
-  border-radius: 10px;*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -310,14 +340,14 @@ html, body {
 }
 
 /* grid y tarjetas */
-.reseñas-titulo{ font-family:'Exo 2',sans-serif; text-align:center; color:#C8A06C; font-weight:800; font-size:25px; margin:0 0 16px; }
+.reseñas-titulo{ font-family:'Exo 2',sans-serif; text-align:center; color:#C79E6A; font-weight:800; font-size:25px; margin:0 0 16px; }
 .reseñas-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:28px; }
 .reseña-card{ background:rgba(255,255,255,.92); color:#2b2b2b; border-radius:12px; padding:20px; box-shadow:0 10px 24px rgba(0,0,0,.18); font-family:'Exo 2',sans-serif; }
 .reseña-estrellas{ color:#ffb400; letter-spacing:1px; }
 .reseña-texto{ margin-top:8px; line-height:1.45; }
 .reseña-autor{ display:block; margin-top:8px; font-weight:800; }
 .reseñas-boton-wrap{ text-align:center; margin-top:22px; }
-.boton-reseñas{ background:#C8A06C; color:#530B0E; font-weight:800; padding:10px 22px; border-radius:10px; text-decoration:none; transition:.2s; }
+.boton-reseñas{ background:#C79E6A; color:#530B0E; font-weight:800; padding:10px 22px; border-radius:10px; text-decoration:none; transition:.2s; }
 .boton-reseñas:hover{ filter:brightness(1.08); }
 
 @media (max-width:1100px){ .reseñas-grid{ grid-template-columns:repeat(2,1fr);} }
@@ -330,7 +360,7 @@ html, body {
   width: 90%;
   max-width: 1328px;
   height: 4px;
-  background: linear-gradient(to right, transparent, #C8A06C, transparent);
+  background: linear-gradient(to right, transparent, #C79E6A, transparent);
   border-radius: 2px;
   margin: 16px auto 24px;
 }
@@ -342,22 +372,24 @@ html, body {
   max-width: 560px;
 }
 .servicio-h3{
-  color: #C8A06C;
+  color: #C79E6A;
+  font-weight: bold;
   font-weight: 800;
   font-size: 24px;
   margin-bottom: 12px;
 }
 .servicio-desc{
-  color: #f3e6d1;
+  color: #C79E6A;
   font-size: 18px;
   line-height: 1.35;
   margin-bottom: 14px;
+  font-weight: bold;
 }
 
 /* Botón */
 .btn-servicio{
   display: inline-block;
-  background: #C8A06C;
+  background: #C79E6A;
   color: #530B0E;
   font-weight: 800;
   padding: 10px 18px;
@@ -384,7 +416,6 @@ html, body {
 /* Responsive */
 @media (max-width: 1100px){
   .servicio-texto{ text-align: center; }
-  .servicios-titulo + .linea-degrade-servicios{ margin: 0 auto 24px; }
 }
 
 /* ====== LÁMINA SERVICIOS ====== */
@@ -394,21 +425,20 @@ html, body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 60px;
   padding: 60px 0;
-  color: #fff;
+  color: #EEEEEE;
 }
 
 .servicios-wrap{
   max-width: 1328px;
   margin: 0 auto;
-  padding: 0 100px;
+  padding: 0 20px;
 }
 
 /* Título y línea (mismo lenguaje visual que “Nosotros”) */
 .servicios-titulo{
   font-family: 'Exo 2', sans-serif;
-  color: #C8A06C;
+  color: #C79E6A;
   font-weight: 800;
   font-size: 28px;
   text-align: right;
@@ -419,7 +449,7 @@ html, body {
   height: 5px;
   margin: 0 0 24px auto;      /* alineada a la derecha */
   border-radius: 2px;
-  background: linear-gradient(to right, #C8A06C, transparent);
+  background: linear-gradient(to right, #C79E6A, transparent);
 }
 
 /* Filas */
@@ -438,29 +468,61 @@ html, body {
 }
 .linea-degrade-titulo-servicio{
   width:90%; max-width:210px; height:5px; margin:8px 0 16px 0;
-  background: linear-gradient(to right, #C8A06C, transparent);
+  background: linear-gradient(to right, #C79E6A, transparent);
   border-radius:2px;
 }
-.servicio-desc{ color:#f3e6d1; font-size:18px; line-height:1.35; margin-bottom:14px; }
 
-/* Botón */
-.btn-servicio{
-  display:inline-block; background:#C8A06C; color:#530B0E; font-weight:800;
-  padding:10px 18px; border-radius:10px; text-decoration:none; transition:filter .2s;
-}
-.btn-servicio:hover{ filter:brightness(1.08); }
+/* === Inicia diseño carga comercial === */
 
-/* Imagen */
-.servicio-img{ flex:1; display:flex; justify-content:center; }
-.servicio-img img{
-  width:100%; max-width:560px; height:auto; border-radius:12px;
-  box-shadow:0 10px 24px rgba(0,0,0,.18);
+.portada-comercial{
+  position: relative;
+  background-image: linear-gradient(rgba(83,11,14,.85), rgba(83,11,14,.85)),
+                    url('../assets/img/cargaComercialHeader.jpg');
+  background-size: cover;
+  background-position: center 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+	height: 491px;
 }
 
-/* Responsive */
-@media (max-width:1100px){
-  .servicios-wrap{ padding:0 20px; }
-  .servicio.fila, .servicio.fila.inversa{ flex-direction:column; gap:22px; }
-  .servicios-titulo{ text-align:center; }
-  .linea-degrade-servicios{ margin:0 auto 24px; }
+.portada-comercial-texto{
+  position: absolute;
+  left: clamp(24px, 6vw, 56px);       /* separación lateral responsiva */
+  bottom: clamp(28px, 6vw, 56px);     /* lo baja un poco desde el borde inferior */
+  max-width: min(90%, 900px);
+}
+
+.portada-comercial-texto h1{
+  margin: 0 0 10px 0;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 800;
+  font-size: clamp(28px, 5vw, 42px);
+  color: #C79E6A;                     /* dorado corporativo */
+  letter-spacing: .2px;
+  text-shadow: 0 2px 10px rgba(0,0,0,.35);
+}
+
+/* Línea corta (debajo del título) */
+.linea-degrade-header-title{
+  width: clamp(180px, 28vw, 360px);
+  height: 8px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #C79E6A 20%, transparent 100%);
+}
+
+/* Línea larga (segunda) */
+.linea-degrade-header-title2{
+  margin-top: 12px;
+  width: clamp(240px, 60vw, 760px);
+  height: 8px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #C79E6A 40%, transparent 100%);
+  opacity: .95;
+}
+
+/* Ajustes en pantallas pequeñas */
+@media (max-width: 640px){
+  .portada-comercial{ height: 360px; }
+  .linea-degrade-header-title,
+  .linea-degrade-header-title2{ height: 6px; }
 }
