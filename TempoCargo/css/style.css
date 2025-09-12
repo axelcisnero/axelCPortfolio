@@ -526,3 +526,13 @@ html, body {
   .linea-degrade-header-title,
   .linea-degrade-header-title2{ height: 6px; }
 }
+/* ====== LÁMINA SERVICIOS CARGA COMERCIAL ====== */
+.bloque-servicios-CComercial{
+  background-image: linear-gradient(rgba(83,11,14,.78), rgba(83,11,14,.78)),
+                    url('../assets/img/shipCargoUp.png'); /* usa la que tengas */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 0;
+  color: #EEEEEE;
+}
