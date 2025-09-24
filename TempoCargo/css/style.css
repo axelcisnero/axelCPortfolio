@@ -467,8 +467,8 @@ html, body {
   color:#C79E6A; font-weight:800; font-size:24px; margin:0;
 }
 .linea-degrade-titulo-servicio{
-  width:90%; max-width:210px; height:5px; margin:8px 0 16px 0;
-  background: linear-gradient(to right, #C79E6A, transparent);
+  width:90%; max-width:300px; height:5px; margin:5px 0 16px 0;
+  background: linear-gradient(to right, transparent, #C79E6A, transparent);
   border-radius:2px;
 }
 
@@ -535,4 +535,54 @@ html, body {
   background-repeat: no-repeat;
   padding: 60px 0;
   color: #EEEEEE;
+}
+
+/* ===== Carrusel Carga Comercial ===== */
+.carrusel-comercial { padding: 2rem 0 3rem; }
+.carrusel-comercial .container { max-width: 1100px; }
+
+.carrusel-comercial .carousel-item img{
+  height: clamp(240px, 42vw, 520px); /* altura responsiva */
+  width: 100%;
+  object-fit: cover;                 /* evita saltos por proporciones distintas */
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+
+/* caption legible y con tu estilo */
+.carrusel-comercial .carousel-caption{
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(2px);
+  border-radius: 12px;
+  padding: .6rem .9rem;
+}
+.carrusel-comercial .carousel-caption h5{ margin: 0 0 .25rem; }
+
+/* colores de indicadores acorde a la marca */
+.carrusel-comercial .carousel-indicators [data-bs-target]{
+  background-color: #C8A06C;            /* dorado */
+  width: 12px; height: 12px; border-radius: 50%;
+  opacity: .6;
+}
+.carrusel-comercial .carousel-indicators .active{ opacity: 1; }
+
+/* botones prev/next más visibles sobre fotos claras */
+.carrusel-comercial .carousel-control-prev-icon,
+.carrusel-comercial .carousel-control-next-icon{
+  filter: drop-shadow(0 0 6px rgba(0,0,0,.45));
+}
+
+/* Colorear flechas del carrusel */
+.carrusel-comercial .carousel-control-prev-icon,
+.carrusel-comercial .carousel-control-next-icon {
+  background-color: #7d0a0a;   /* tu color corporativo */
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+/* Opcional: oscurecer un poco al hover */
+.carrusel-comercial .carousel-control-prev-icon:hover,
+.carrusel-comercial .carousel-control-next-icon:hover {
+  background-color: #5c0606;  /* tono más oscuro en hover */
 }
